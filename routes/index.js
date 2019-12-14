@@ -13,12 +13,12 @@ router.get('/', async function(req, res, next) {
 
   opMatch = {$match:{"emp_no": userName}};
   opUnwind = {$unwind: "$titles"}; // coupe le tableau
-  opProject = {$project: {"titles.title":1}};
+  opProject = {$project: {"first_name":1, "last_name":1, "titles.title":1}};
 
   var employee = await collection.aggregate([opMatch, opUnwind, opProject],function (findErr, result) {
     if (findErr) throw findErr;
     //employee = result;
-    console.log( employee );
+    console.log( result );
     return result
   });
 
@@ -27,7 +27,6 @@ router.get('/', async function(req, res, next) {
    var number = await collection.aggregate([opMatch2, opGroup],function (findErr, result) {
     if (findErr) throw findErr;
     //number = result;
-    console.log( number );
     return result
   });
 

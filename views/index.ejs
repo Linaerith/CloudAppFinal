@@ -133,7 +133,11 @@
               <div class="col-xl-6">
                 <div class="tm-section-half">
                     <div><i class="far fa-6x fa-building mb-5 tm-section-icon"></i></div>
-                    <h2 class="tm-section-title tm-color-primary mb-5">Employee's Profile</h2>
+                      <%
+                        var list = '';
+                        list += '<h2 class="tm-section-title tm-color-primary mb-5">' + userlist[0].first_name + ' ' + userlist[0].last_name + '\'s Profile</h2>';
+                      %>
+                      <%- list %>
                     <div id="positions" class="mb-5" >
                       <ul class="list-group">
                         <%
@@ -233,6 +237,5 @@
     <script src="/slick/slick.min.js"></script>
     <script src="/js/jquery.magnific-popup.min.js"></script>
     <script src="/js/templatemo-scripts.js"></script>
-    <script src="/js/bundle.js"></script>
   </body>
 </html>
