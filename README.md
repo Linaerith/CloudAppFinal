@@ -3,7 +3,6 @@
 > JS, express-generator & MongoDB project
 
 Cloud Application made by group 2 for the final report. 🏋‍
-Made with cute bears to get motivated. 🐣
 
 ## Build Setup
 
